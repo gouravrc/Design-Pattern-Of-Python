@@ -16,11 +16,11 @@ class BatteryToSocketClassAdapter(SocketClass):
     def supply_power_in_volts(self):
         amps = self.battery.supply_power()
         # Convert amps to volts (dummy calculation for example)
-        volts = "Converting 10 amps to 100 volts"
+        volts = "Converting 8 amps to 100 volts"
         return volts
 
 # Client code
 battery = Battery()
 adapter = BatteryToSocketClassAdapter(battery)
 
-print(adapter.supply_power_in_volts())  # Output: Converting 10 amps to 120 volts
+print(adapter.supply_power_in_volts())  # Output: Converting 8 amps to 120 volts
